@@ -1,0 +1,29 @@
+# Terraform state — plain text, may hold secrets read back from AWS
+*.tfstate
+*.tfstate.*
+.terraform.tfstate.lock.info
+
+# Working directory created by `terraform init`
+.terraform/
+
+# Variable values — where secrets usually leak in a public repo
+*.tfvars
+*.tfvars.json
+
+# Crash logs and local override files
+crash.log
+crash.*.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# NOTE: .terraform.lock.hcl does NOT belong here — it must be committed.
+# It pins the provider hash. Without it the CI may pull a different version
+# and the plan diverges from what was tested.
+
+# Local AI tooling instructions
+/CLAUDE.md
+
+# Docs
+/docs/
