@@ -2,6 +2,9 @@
 # so the trust policies in infra/bootstrap/roles.tf can be checked against
 # reality instead of against a guess. Delete once the values are confirmed.
 #
+# Confirmed on run #1: ref:refs/heads/main and environment:prod both match the
+# trust policies. This PR exists to confirm the third one, pull_request.
+#
 # Only `sub`, `aud` and a few non-sensitive claims are printed. The token itself
 # is a credential and this repository is public, so it never reaches the log.
 name: inspect-oidc-claims
